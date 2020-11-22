@@ -11,6 +11,7 @@ Every time we need create a new Context (and its Provider) inside a project, we 
 > create-react-context-data provides a handy function to immediately create Context and Provider for you.
 
 All you need to do is define your reducer function and the actions you need to handle your data.
+Under the hood the package uses the useReducer hook and bind the dispatch function to all the actions.
 
 ### Installation
 
