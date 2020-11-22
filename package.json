@@ -1,6 +1,6 @@
 {
   "name": "create-react-context-data",
-  "version": "1.0.1",
+  "version": "1.0.3",
   "description": "Easily create Context and Provider in your React application without repeating boilerplate code.",
   "main": "index.js",
   "scripts": {

@@ -50,7 +50,7 @@ For this example, we'll use ItemContext.js
 import createReactDataContext from 'create-react-context-data';
 
 // #2 define your reducer function
-const myReducer = (state, action) => {
+const itemReducer = (state, action) => {
   const { type, payload } = action;
   switch (type) {
     case 'CREATE_ITEM':
@@ -69,11 +69,11 @@ const myReducer = (state, action) => {
 
 // dispatch is provided by default by create-react-context-data
 const createItem = (dispatch) => (newItem) => {
-  dispatch({ type: CREATE_ITEM, payload: new Item() });
+  dispatch({ type: 'CREATE_ITEM', payload: newItem });
 };
 
 const deleteItem = (dispatch) => (id) => {
-  dispatch({ type: DELETE_ITEM, payload: id });
+  dispatch({ type: 'DELETE_ITEM', payload: id });
 };
 
 const myActions = { createItem, deleteItem };
@@ -116,14 +116,15 @@ function App() {
 ---
 
 ```javascript
+import React, { useContext } from 'react';
 // Import and rename the context with a suitable name to prevent collision with other contexts
 import { Context as ItemContext } from '../context/ItemContext';
 
 // You can now access the Context as you would normally do
 const ToDoList = () => {
-  const state = useContext(ItemContext);
+  const { state } = useContext(ItemContext);
   const { items } = state;
-  if (!items.length) return null;
+  if (!items || !items.length) return null;
   return (
     <ul>
       {items.map((item) => (
