@@ -73,7 +73,7 @@ const createItem = (dispatch) => (newItem) => {
 };
 
 const deleteItem = (dispatch) => (id) => {
-  dispatch({ type: DELETE_BOOK, payload: id });
+  dispatch({ type: DELETE_ITEM, payload: id });
 };
 
 const myActions = { createItem, deleteItem };
