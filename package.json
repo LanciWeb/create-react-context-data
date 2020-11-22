@@ -1,0 +1,20 @@
+{
+  "name": "create-react-context-data",
+  "version": "1.0.0",
+  "description": "Easily create Context and Provider in your React application without repeating boilerplate code.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "react",
+    "react-context",
+    "Context API",
+    "Context Provider"
+  ],
+  "author": "marcolanci",
+  "license": "ISC",
+  "dependencies": {
+    "react": "^17.0.1"
+  }
+}
